@@ -10,7 +10,7 @@ describe('convertNumberToWord test', () => {
   it('should pass with two digits', () => {
     expect(convertNumberToWord(11)).toEqual('eleven');
     expect(convertNumberToWord(24)).toEqual('twenty four');
-    expect(convertNumberToWord(45)).toEqual('forty five');
+    expect(convertNumberToWord(45)).toEqual('fourty five');
   });
 
   it('should pass with three digits', () => {
@@ -24,16 +24,21 @@ describe('convertNumberToWord test', () => {
     expect(convertNumberToWord(9281)).toEqual('nine thousand two hundred and eighty one');
     expect(convertNumberToWord(7492)).toEqual('seven thousand four hundred and ninety two');
   });
-  
+
   it('should pass with five digits', () => {
     expect(convertNumberToWord(10000)).toEqual('ten thousand');
-    expect(convertNumberToWord(99281)).toEqual('ninty nine thousand two hundred and eighty one');
+    expect(convertNumberToWord(99281)).toEqual('ninety nine thousand two hundred and eighty one');
     expect(convertNumberToWord(77492)).toEqual('seventy seven thousand four hundred and ninety two');
   });
-  
+
    it('should pass with six digits', () => {
     expect(convertNumberToWord(100000)).toEqual('one hundred thousand');
-    expect(convertNumberToWord(999281)).toEqual('nine hundred and ninty nine thousand two hundred and eighty one');
+    expect(convertNumberToWord(999281)).toEqual('nine hundred and ninety nine thousand two hundred and eighty one');
     expect(convertNumberToWord(777492)).toEqual('seven hundred and seventy seven thousand four hundred and ninety two');
   });
+
+  it('should pass with seven digits', () => {
+    expect(convertNumberToWord(1000000)).toEqual('one million');
+    expect(convertNumberToWord(1990603)).toEqual('one million nine hundred and ninety thousand six hundred and three');
+  })
 })
