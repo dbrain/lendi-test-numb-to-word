@@ -4,5 +4,5 @@
     "outDir": "lib",
     "rootDir": "src"
   },
-  "exclude": ["__mocks__", "lib", "node_modules", "test", "**/**/__mocks__", "**/**/*.test.ts"],
+  "exclude": ["__mocks__", "lib", "node_modules", "test", "**/**/__mocks__", "**/**/*.test.ts", "jest.config.ts"],
 }

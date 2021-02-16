@@ -41,4 +41,10 @@ describe('convertNumberToWord test', () => {
     expect(convertNumberToWord(1000000)).toEqual('one million');
     expect(convertNumberToWord(1990603)).toEqual('one million nine hundred and ninety thousand six hundred and three');
   })
+
+  it('should explode if overly large numbers are attempted to be converted', () => {
+    expect(() => {
+      convertNumberToWord(1999999999)
+    }).toThrow(`Numbers larger than 999 million are not supported.`)
+  })
 })
